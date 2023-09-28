@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.14)
+
+project(TestChess LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
+
+add_executable(TestAppProj WIN32
+BasePiece.cpp
+BasePiece.h
+Board.cpp
+Board.h
+Cell.cpp
+Cell.h
+ChessPiece.h
+Color.h
+color.hpp
+Coordinates.h
+Coordinates.cpp
+IGameRules.h
+chess.cpp
+Signs.h
+Queens.cpp
+Queens.h
+)   
