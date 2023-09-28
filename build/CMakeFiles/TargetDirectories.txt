@@ -1,0 +1,3 @@
+C:/Users/Андрей/Desktop/widget/build/CMakeFiles/TestAppProj.dir
+C:/Users/Андрей/Desktop/widget/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Андрей/Desktop/widget/build/CMakeFiles/ZERO_CHECK.dir
