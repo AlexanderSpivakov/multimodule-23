@@ -155,7 +155,7 @@ public:
 	/*{
 		return building;
 	}*/
-	void SetBuilding( Building newBuilding ) 
+	void SetBuilding(Building newBuilding);
 	/* {
 		building = newBuilding;
 	}*/
