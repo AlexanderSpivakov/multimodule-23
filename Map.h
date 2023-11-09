@@ -33,64 +33,32 @@ enum class TerrainType {
 
 class Terrain {
 public:
-	virtual TerrainType GetType() const {};
-	virtual double GetTerrainInitiativeFactor() const {};
+	virtual TerrainType GetType() const ;
+	virtual double GetTerrainInitiativeFactor() const ;
 };
 
 class Plain : public Terrain {
 
 	TerrainType GetType() const override;
 	double GetTerrainInitiativeFactor() const;
-/*public:
-	TerrainType GetType() const override {
-		return TerrainType::Plain;
-	}
-	double GetTerrainInitiativeFactor() const {
-		return 1.;
-	}
-	*/
 };
 
 class Desert : public Terrain {
 public:
 	TerrainType GetType() const override;
 	double GetTerrainInitiativeFactor() const;
-	/*
-	TerrainType GetType() const override {
-		return TerrainType::Desert;
-	}
-	double GetTerrainInitiativeFactor() const {
-		return 1.2;
-	}
-	*/
 };
 
 class Hill : public Terrain {
 public:
 	TerrainType GetType() const override;
 	double GetTerrainInitiativeFactor() const;
-	/*
-	TerrainType GetType() const override {
-		return TerrainType::Hill;
-	}
-	double GetTerrainInitiativeFactor() const {
-		return 1.5;
-	}
-	*/
 };
 
 class Mountain : public Terrain {
 public:
 	TerrainType GetType() const override;
 	double GetTerrainInitiativeFactor() const;
-	/*
-	TerrainType GetType() const override {
-		return TerrainType::Mountain;
-	}
-	double GetTerrainInitiativeFactor() const {
-		return 2.;
-	}
-	*/
 };
 
 
@@ -98,14 +66,6 @@ class Ocean : public Terrain {
 public:
 	double GetTerrainInitiativeFactor() const;
 	TerrainType GetType() const override;
-	/*
-	TerrainType GetType() const override {
-		return TerrainType::Ocean;
-	}
-	double GetTerrainInitiativeFactor() const {
-		return 1.;
-	}
-	*/
 };
 
 class Building {
@@ -124,21 +84,6 @@ class NoBuilding : public Building {
 
 };
 
-class Cell {
-	Coordinates coords;
-	CellFilling filling;
-
-	TerrainType GetTerrain();
-	/* {
-		return filling.GetTerrain().GetType();
-	}*/
-};
-
-class Coordinates {
-	int x;
-	int y;
-};
-
 class CellFilling {
 	Resourse resourse;
 	Terrain terrain;
@@ -146,23 +91,38 @@ class CellFilling {
 	bool IsRoadBuilt;
 
 public:
-	Terrain GetTerrain() const; 
-	/* {
-		return terrain;
-	}*/
+	Terrain GetTerrain() const;
 
-	Building GetBuilding() const; 
-	/*{
-		return building;
-	}*/
+	Building GetBuilding() const;
 	void SetBuilding(Building newBuilding);
-	/* {
-		building = newBuilding;
-	}*/
 };
+
+class Coordinates {
+	int x;
+	int y;
+public:
+	Coordinates();
+};
+class Cell {
+	Coordinates coords;
+	std::vector<bool> isSeenToPlayer; // если isSeenToPlayer[index] == true, то клетка видна команде с номером index, иначе - не видна
+	CellFilling filling;
+
+public:
+	Cell();
+	TerrainType GetTerrain();
+	Coordinates GetCoordinates();
+
+};
+
+
+
 
 class Map {
 	std::vector<Cell> map;
+public:
+	Map();
+	Map(int n);
 };
 
 #endif // __MC_MAP__

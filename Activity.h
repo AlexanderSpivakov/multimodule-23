@@ -15,14 +15,12 @@ class Activity {
 
 public:
 	void UseInitiativePoints(int points);
-	/* {
-		initiativePointsLeft = initiativePointsLeft - points > 0 ? initiativePointsLeft - points : 0;
-		if (initiativePointsLeft == 0)
-		{
-			PerformAction();
-		}
-	}*/
 	virtual void PerformAction() const {}
+};
+
+// отсутствие действий
+class None : public Activity {
+	int BasicInitiativePointsNeeded = 0;
 };
 
 class Move : public Activity {
