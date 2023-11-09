@@ -38,54 +38,74 @@ public:
 };
 
 class Plain : public Terrain {
-public:
+
+	TerrainType GetType() const override;
+	double GetTerrainInitiativeFactor() const;
+/*public:
 	TerrainType GetType() const override {
 		return TerrainType::Plain;
 	}
 	double GetTerrainInitiativeFactor() const {
 		return 1.;
 	}
+	*/
 };
 
 class Desert : public Terrain {
 public:
+	TerrainType GetType() const override;
+	double GetTerrainInitiativeFactor() const;
+	/*
 	TerrainType GetType() const override {
 		return TerrainType::Desert;
 	}
 	double GetTerrainInitiativeFactor() const {
 		return 1.2;
 	}
+	*/
 };
 
 class Hill : public Terrain {
 public:
+	TerrainType GetType() const override;
+	double GetTerrainInitiativeFactor() const;
+	/*
 	TerrainType GetType() const override {
 		return TerrainType::Hill;
 	}
 	double GetTerrainInitiativeFactor() const {
 		return 1.5;
 	}
+	*/
 };
 
 class Mountain : public Terrain {
 public:
+	TerrainType GetType() const override;
+	double GetTerrainInitiativeFactor() const;
+	/*
 	TerrainType GetType() const override {
 		return TerrainType::Mountain;
 	}
 	double GetTerrainInitiativeFactor() const {
 		return 2.;
 	}
+	*/
 };
 
 
 class Ocean : public Terrain {
 public:
+	double GetTerrainInitiativeFactor() const;
+	TerrainType GetType() const override;
+	/*
 	TerrainType GetType() const override {
 		return TerrainType::Ocean;
 	}
 	double GetTerrainInitiativeFactor() const {
 		return 1.;
 	}
+	*/
 };
 
 class Building {
@@ -108,9 +128,10 @@ class Cell {
 	Coordinates coords;
 	CellFilling filling;
 
-	TerrainType GetTerrain() {
+	TerrainType GetTerrain();
+	/* {
 		return filling.GetTerrain().GetType();
-	}
+	}*/
 };
 
 class Coordinates {
@@ -125,15 +146,19 @@ class CellFilling {
 	bool IsRoadBuilt;
 
 public:
-	Terrain GetTerrain() const {
+	Terrain GetTerrain() const; 
+	/* {
 		return terrain;
-	}
-	Building GetBuilding() const {
+	}*/
+
+	Building GetBuilding() const; 
+	/*{
 		return building;
-	}
-	void SetBuilding( Building newBuilding ) {
+	}*/
+	void SetBuilding( Building newBuilding ) 
+	/* {
 		building = newBuilding;
-	}
+	}*/
 };
 
 class Map {
