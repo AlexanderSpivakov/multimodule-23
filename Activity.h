@@ -1,24 +1,48 @@
-#pragma once
-enum class ActivityName 
-{
-	build,
-	move,
-	attack,
-	chill,
-	craft,
-	collect,
-	weed,
-	castSpell,
-	findStick
+#ifndef __MC_ACTIVITY__
+#define __MC_ACTIVITY__
+
+#define IMPOSSIBLE_INITITIVE 65000
+
+enum class ActivityType {
+	Momentary,
+	Delayed
 };
 
-class Activity
-{
-	int time;
-	ActivityName name;
+class Activity {
+	int basicInitiativePointsNeeded; // базовое кол-во очков инициативы, требуемое для завершения действия 
+	int initiativePointsLeft; // оставшееся до завершения действия кол-во очков инициативы
+	ActivityType type;
+
 public:
-	Activity();
-	void ChangeCell();
-	void Execute();
+	void UseInitiativePoints(int points) {
+		initiativePointsLeft = initiativePointsLeft - points > 0 ? initiativePointsLeft - points : 0;
+		if (initiativePointsLeft == 0)
+		{
+			PerformAction();
+		}
+	}
+	virtual void PerformAction() const {}
 };
 
+class Move : public Activity {
+	int BasicInitiativePointsNeeded = 1;
+
+};
+
+class CreateCity : public Activity {
+	int BasicInitiativePointsNeeded = 0;
+};
+
+class BuildRoad : public Activity {
+	int BasicInitiativePointsNeeded = 5;
+};
+
+class BuildMine : public Activity {
+	int BasicInitiativePointsNeeded = 10;
+};
+
+class Hold : public Activity {
+	int BasicInitiativePointsNeeded = IMPOSSIBLE_INITITIVE;
+};
+
+#endif // __MC_ACTIVITY__

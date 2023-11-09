@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.14)
+
+project(multimod LANGUAGES CXX)
+
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
+
+add_library(BackEnd
+Map.h
+Unit.h
+Activity.h
+Map.cpp
+Unit.cpp
+Activity.cpp
+)   
+add_executable(FrontApp 
+APIforFrontEnd.cpp
+APIforFrontEnd.h
+)   
+#ג נאחםûו פאיכû
