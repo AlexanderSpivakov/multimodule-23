@@ -14,13 +14,14 @@ class Activity {
 	ActivityType type;
 
 public:
-	void UseInitiativePoints(int points) {
+	void UseInitiativePoints(int points);
+	/* {
 		initiativePointsLeft = initiativePointsLeft - points > 0 ? initiativePointsLeft - points : 0;
 		if (initiativePointsLeft == 0)
 		{
 			PerformAction();
 		}
-	}
+	}*/
 	virtual void PerformAction() const {}
 };
 
