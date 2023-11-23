@@ -1,3 +1,4 @@
+
 #include "Map.h"
 Coordinates::Coordinates()
 {
@@ -61,6 +62,12 @@ TerrainType Cell::GetTerrain(){
 Coordinates Cell::GetCoordinates()
 {
 	return Coordinates();
+}
+CellFilling::CellFilling()
+{
+	terrain = Plain();
+	resourse = NoResourse();
+	building = NoBuilding();
 }
 Terrain	CellFilling::GetTerrain() const {
 	return terrain;

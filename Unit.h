@@ -11,14 +11,13 @@ class Unit {
 	int InitiativePoints;
 	int HitPoints;
 	Activity currentActivity;
-public:
-	Unit();
 };
 
 class Worker : public Unit {
 	int InitiativePoints = 3;
 	int HitPoints = 1;
 	Activity currentActivity = None();
+public: 
 };
 
 class Warrior : public Unit {
@@ -35,11 +34,10 @@ class Settler : public Unit {
 class UnitID {
 public:
 	std::shared_ptr<Unit> unit_ptr;
-	Teams unitTeam;
+	Teams unitTeam=Teams::nikto;
 
 	UnitID(std::shared_ptr<Unit> unit, Teams team) :
 		unit_ptr(unit), unitTeam(team) {}
-
-	UnitID();
 };
+Worker first;
 #endif // __MC_UNIT__

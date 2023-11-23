@@ -91,6 +91,7 @@ class CellFilling {
 	bool IsRoadBuilt;
 
 public:
+	CellFilling();
 	Terrain GetTerrain() const;
 
 	Building GetBuilding() const;

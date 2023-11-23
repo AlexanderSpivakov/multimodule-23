@@ -14,6 +14,7 @@ Activity.h
 Map.cpp
 Unit.cpp
 Activity.cpp
+GameManager.h
 )   
 add_executable(FrontApp 
 APIforFrontEnd.cpp
