@@ -1,8 +1,13 @@
-#pragma once
+#ifndef STRUCTS
+#define STRUCTS
 
 #include <string>
 
+#ifdef _WIN32
 struct __declspec(dllexport) Coords {
+#else
+struct Coords {
+#endif
   int x;
   int y;
 
@@ -21,3 +26,5 @@ struct Test {
   std::string group;
   Coords coordinates;
 };
+
+#endif STRUCTS

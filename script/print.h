@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PRINT
+#define PRINT
 
 #include <iostream>
 #include "structs.h"
@@ -10,3 +11,5 @@ void PrintStructTest(const Test& test) {
   test.coordinates.Print();
   std::cout << std::endl;
 }
+
+#endif PRINT
