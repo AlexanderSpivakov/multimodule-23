@@ -1,0 +1,5 @@
+﻿CMAKE_MINIMUM_REQUIRED( VERSION 3.14)
+PROJECT(applied_library)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+add_executable( rootmodule speaker.cpp speaker.h )
