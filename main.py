@@ -1,7 +1,7 @@
 #!python
 
 def numToStr( i ):
-    if i == 1 :
+    if i == 0 :
         return 'zero'
     if i == 1 :
         return 'one'
