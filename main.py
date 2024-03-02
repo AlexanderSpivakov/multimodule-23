@@ -9,6 +9,8 @@ def numToStr( i ):
         return 'two'
     if i == 3 :
         return 'three'
+    if i == 4:
+        return 'four'
     return 'many'
 
 def main():
