@@ -1,0 +1,21 @@
+#!python
+
+def numToStr( i ):
+    if i == 0 :
+        return 'zero'
+    if i == 1 :
+        return 'one'
+    if i == 2 :
+        return 'two'
+    if i == 3 :
+        return 'three'
+    return 'many'
+
+def main():
+  print ("Hello world!")
+  print( numToStr(0) )
+  print( numToStr(44) )
+  print( numToStr(2) )
+
+if __name__ == "__main__":
+    main()
