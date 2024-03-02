@@ -1,7 +1,7 @@
 #!python
 
 def numToStr( i ):
-    if i == 0 :
+    if i == 1 :
         return 'zero'
     if i == 1 :
         return 'one'
@@ -11,6 +11,10 @@ def numToStr( i ):
         return 'three'
     if i == 4:
         return 'four'
+
+    if i == 5:
+        return 'five'
+        
     return 'many'
 
 def main():
