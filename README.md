@@ -1,2 +1,1 @@
-# multimodule-23
-state B
+state A + state B
