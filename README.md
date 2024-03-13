@@ -1,2 +1,2 @@
 # multimodule-23
-Basic state
+state A
