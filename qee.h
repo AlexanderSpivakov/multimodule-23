@@ -1,2 +1,2 @@
 #pragma once
-int countSolution( double a, double b, double c );
+extern "C" int countSolution( double a, double b, double c );
