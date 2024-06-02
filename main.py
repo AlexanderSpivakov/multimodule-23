@@ -1,27 +1,27 @@
 #!python
 
-def numToStr( i ):
+def numToStr(i):
     if i == 0 :
-        return 'zero'
+        return 'Zorro'
     if i == 1 :
-        return 'one'
+        return 'Алёхин'
     if i == 2 :
-        return 'two'
+        return 'Барабанов'
     if i == 3 :
-        return 'three'
+        return 'Зажигин'
     if i == 4:
-        return 'four'
-
+        return 'Егорцев'
     if i == 5:
-        return 'five'
-        
-    return 'many'
+        return 'Карасёв'
+    return 'empty'
 
 def main():
-  print ("Hello world!")
+  print ("УТС-33")
   print( numToStr(0) )
-  print( numToStr(44) )
+  print( numToStr(1) )
   print( numToStr(2) )
+  print( numToStr(3) )
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()
