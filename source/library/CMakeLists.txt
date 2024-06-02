@@ -1,5 +1,6 @@
-﻿CMAKE_MINIMUM_REQUIRED( VERSION 3.14)
+﻿CMAKE_MINIMUM_REQUIRED(VERSION 3.14)
 PROJECT(applied_library)
+include_directories(${CMAKE_SOURCE_DIR}/library)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-add_library( rootmodule SHARED speaker.cpp speaker.h )
+add_library(rootmodule SHARED speaker.cpp speaker.h)

@@ -2,5 +2,5 @@
 mkdir build
 cmake -S Source -B build
 cmake --build build --config=Debug
-cd build/bin
+cd build/bin/Debug
 ./demoapplication JohnDow 44

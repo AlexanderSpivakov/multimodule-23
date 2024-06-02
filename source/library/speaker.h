@@ -1,3 +1,3 @@
 ﻿#pragma once
 
-extern "C" void LogNameAge( const char* name, const char* age );
+extern "C" int LogNameAge(const char* name, const char* age);
