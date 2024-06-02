@@ -1,15 +1,11 @@
-﻿#include <speaker.h>
+#include "speaker.h"
+#include <iostream>
 
-int main( int argc, const char ** argv )
-{
-  if ( argc == 3 )
-  {
-  	LogNameAge( argv[1], argv[2] );
-  	return 0;
-  }
-  else
-  {
-  	LogNameAge( 0, 0 );
-  	return argc;
-  }
+int main(int argc, char** argv) {
+    if (argc != 3) {
+        std::cerr << "Usage: " << argv[0] << " <name> <age>" << std::endl;
+        return 1;
+    }
+    LogNameAge(argv[1], argv[2]);
+    return 0;
 }
