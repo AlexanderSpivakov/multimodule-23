@@ -1,0 +1,8 @@
+/home/localadmin/multimodule-23/build/CMakeFiles/edit_cache.dir
+/home/localadmin/multimodule-23/build/CMakeFiles/rebuild_cache.dir
+/home/localadmin/multimodule-23/build/executable/CMakeFiles/demoapplication.dir
+/home/localadmin/multimodule-23/build/executable/CMakeFiles/edit_cache.dir
+/home/localadmin/multimodule-23/build/executable/CMakeFiles/rebuild_cache.dir
+/home/localadmin/multimodule-23/build/library/CMakeFiles/rootmodule.dir
+/home/localadmin/multimodule-23/build/library/CMakeFiles/edit_cache.dir
+/home/localadmin/multimodule-23/build/library/CMakeFiles/rebuild_cache.dir
