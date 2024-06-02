@@ -1,6 +1,7 @@
-﻿#build the project and run the app
+﻿#!/bin/bash
+#build the project and run the app
 mkdir build
-cmake -S build -B Source
+cmake -S . -B build
 cmake --build build --config=Debug
-cd build/bin
+cd build/bin/Debug
 ./demoapplication JohnDow 44
